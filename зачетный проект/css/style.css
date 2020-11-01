@@ -1,9 +1,16 @@
+@font-face {
+    font-family:'raleway';
+    src: url(../fonts/raleway-regular.ttf);
+}
+
+@font-face {
+    font-family:'raleway extra bold';
+    src: url(../fonts/raleway extra bold.ttf);
+}
 body {
 	width: 1920px;
-	margin: 0;
-	padding: 0;
-	font-family: 'Montserrat', sans-serif;
-}
+	margin: 0 auto;
+	}
 
 .header-main-page {
 	width: 100%;
@@ -45,15 +52,22 @@ body {
 }
 
 .logo-txt {
-	font-family: Raleway;
+	font-family: 'raleway';
 	font-size: 34px;
 	letter-spacing: -1.36px;
+    font-weight: 400;
+    
 }
 
 .logo-link:hover,
 .logo-txt:hover {
 	color: #c7b299;
 	fill: #c7b299;
+}
+.logo-link:active,
+.logo-txt:active {
+	color: white;
+	fill: white;
 }
 
 .menu {
@@ -71,11 +85,17 @@ body {
 	margin: 0 30px 0 0;
 	display: block;
 	padding: 5px 0 5px 0;
+    font-family: Montserrat;
+font-style: normal;
+letter-spacing: normal;
+line-height: normal;
+
 }
 
 .box {
 	fill: white;
 	border: none;
+    outline: none;
 	background-color: transparent;
 	margin: 0 30px 0 30px;
 }
@@ -86,42 +106,55 @@ body {
 	box-sizing: border-box;
 	/*     border: 1px solid red;*/
 	position: relative;
-	transition: all 1s;
+/*	transition: all 1s;*/
 }
+.menu-search-lable {
+    display: block;
+  width: 100%;
+  height: 100%;
+    box-sizing: border-box;
+/*	     border: 1px solid red;*/
+}
+.menu-search-lable:hover .searh-icon{
+    fill: #c7b299;
+    cursor: pointer;
+    
+}
+.menu-search-lable:active .searh-icon{
+    fill: white;
+}
+
 
 .menu-search-pole {
-	position: absolute;
-	top: 0;
-	left: 0;
-	width: 100%;
-	;
-	height: 24px;
-	outline: 0;
-	border: 0;
-	display: none;
-	font-size: 14px;
+  width: 0;
+  min-height: 0;
+  outline: none;
+  box-sizing: border-box;
+  background-color: transparent;
+  border: none;
+  position: absolute;
+  top: 40px;
+  left: -119px;
+  color: #fff;
+font-size: 14px;
+    font-size: 14px;
+	font-weight: 300;
+	font-family: Montserrat;
+
 }
 
+.menu-search-pole:focus {
+  width: 150px;
+  min-height: 24px;
+  transition: width 1s ease;
+  border: 1px solid #fff;
+}
 .searh-icon {
-	position: absolute;
-	top: 0;
-	right: 0;
 	fill: white;
-	text-align: center;
-	font-size: 14 px;
-	transition: all 1s;
+	width: 100%;
+    height: 100%;
 }
 
-.menu-search:hover {
-	width: 200px;
-	cursor: pointer;
-}
-
-form:hover input {
-	display: block;
-	background-color: transparent;
-	color: white;
-}
 
 .menu-link:hover,
 .box:hover {
@@ -129,7 +162,12 @@ form:hover input {
 	fill: #c7b299;
 	cursor: pointer;
 }
-
+.menu-link:active,
+.box:active {
+	fill: white;
+	cursor: pointer;
+    color: white;
+}
 .header-carusel {
 	width: 100%;
 	box-sizing: border-box;
@@ -143,11 +181,15 @@ form:hover input {
 	background-color: transparent;
 	border: none;
 	opacity: 0.5;
+    outline: none;
 }
 
 .header-carusel-button:hover {
 	fill: #d3c1ad;
 	cursor: pointer;
+}
+.header-carusel-button:active {
+	fill: white;
 }
 
 .header-carusel-content {
@@ -161,21 +203,22 @@ form:hover input {
 
 .header-carusel-content-txt1 {
 	color: #ffffff;
-	font-family: 'Raleway';
+	font-family:'raleway';
 	font-size: 36px;
 	font-weight: 500;
 	text-align: center;
 	display: block;
 	margin: 0 0 10px 0;
-}
+   }
 
 .header-carusel-content-txt2 {
 	display: block;
 	color: #ffffff;
-	font-family: 'Raleway';
+    font-family:'raleway extra bold';
 	font-size: 52px;
 	font-weight: 400;
 	text-align: center;
+
 }
 
 .header-carusel-content-txt3 {
@@ -205,7 +248,7 @@ form:hover input {
 }
 
 .header-carusel-button-link-txt {
-	font-family: "Raleway - Extra Bold";
+	font-family:'raleway extra bold';
 	font-size: 14px;
 	font-weight: 400;
 	line-height: 23px;
@@ -245,4 +288,7 @@ form:hover input {
 	background-color: transparent;
 	border: 2px solid #d3c1ad;
 	transform: scale(1.2);
+}
+.pagination-link:active {
+	background-color: #ffffff;
 }
