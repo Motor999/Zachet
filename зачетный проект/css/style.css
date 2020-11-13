@@ -98,6 +98,10 @@ body {
 	align-items: center;
 }
 
+#menuburger {
+	display: none;
+}
+
 .menu-link {
 	color: white;
 	text-decoration: none;
@@ -603,6 +607,7 @@ body {
 	margin: 0 29px 30px 0;
 	position: relative;
 }
+
 
 .project-item:nth-of-type(3),
 .project-item:nth-of-type(6) {
@@ -1365,4 +1370,226 @@ body {
 
 .copy-link2:hover {
 	color: #c7b299
+}
+
+@media (max-width:576px) {
+	body {
+		width: 100%;
+	}
+	.header-main-page {
+		width: 100%;
+		padding: 10px 20px;
+		min-height: auto;
+		justify-content: space-between;
+		background-size: cover;
+	}
+	.menu {
+		width: 100%;
+		position: relative;
+	}
+	.menuburger-lable {
+		width: 50px;
+		margin: 0px;
+		display: block;
+		min-height: 50px;
+		box-sizing: border-box;
+		/*        border: 1px solid red;*/
+		align-self: flex-end;
+		position: relative;
+	}
+	.menuburger-lable:hover {
+		cursor: pointer
+	}
+	.menu-link {
+		visibility: hidden;
+		height: 0;
+		margin: 0;
+		padding: 0;
+		/*        transition: all 1s linear ;*/
+	}
+	input[type="checkbox"]:checked~.menu-link {
+		visibility: visible;
+		height: auto;
+		width: 100%;
+		margin: 0 0 0 30px;
+		padding: 5px 0 5px 0;
+	}
+	input[type="checkbox"]:checked~.menuburger-lable .burgerspan {
+		transform: rotate(90deg);
+	}
+	.box {
+		display: none;
+	}
+	.menu-search {
+		display: none;
+	}
+	.burgerspan {
+		width: 50px;
+		border: 3px solid white;
+		position: absolute;
+		top: 22px;
+		left: -1px;
+		display: block;
+		box-sizing: border-box;
+		margin: 0;
+		border-radius: 3px;
+		background-color: white;
+		transition: 0.5s linear
+	}
+	.burgerspan:before {
+		content: "";
+		display: block;
+		width: 50px;
+		border: 3px solid white;
+		position: absolute;
+		top: -18px;
+		left: -3px;
+		box-sizing: border-box;
+		border-radius: 3px;
+		background-color: white;
+	}
+	.burgerspan:after {
+		content: "";
+		display: block;
+		width: 50px;
+		border: 3px solid white;
+		position: absolute;
+		top: 12px;
+		left: -3px;
+		box-sizing: border-box;
+		border-radius: 3px;
+		background-color: white;
+	}
+	.header-carusel {
+		display: none;
+	}
+	.pagination {
+		display: none;
+	}
+	.menu {
+		flex-direction: column;
+	}
+	.header-toolbar {
+		width: 100%;
+	}
+	.features {
+		flex-direction: column;
+		padding: 10px 20px;
+		align-items: center;
+	}
+	.features-item {
+		margin: 20px;
+	}
+	.viuwer-content {
+		padding: 20px;
+	}
+	.viuwer-content-items {
+		display: none;
+	}
+	.reklama {
+		padding: 20px;
+		flex-wrap: wrap;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center
+	}
+	.reclama-content {
+		width: 100%;
+		margin: 0 0 10px 0;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+	}
+	.project {
+		padding: 20px;
+	}
+    
+	.project-item {
+		margin: 20px 0 0 0;
+	}
+    .project-item:nth-of-type(3), 
+    .project-item:nth-of-type(6) {
+    margin: 20px 0 0px 0;
+    }
+	.project-menu {
+		margin: 10px 5px;
+	}
+	.project-menu-btn {
+		padding: 5px;
+	}
+    .project-btn-load {
+        margin: 20px 0 0px 0;
+    }
+	.video {
+		display: none;
+	}
+	.app-mobile {
+		padding: 20px 20px 20px 20px;
+		background-position: 20px bottom;
+		background-size: 50%;
+		/*        display: flex;*/
+		min-height: auto;
+		width: 100%
+	}
+	.app-mobile-review {
+		width: 100%;
+	}
+	.app-mobile-review-title {
+		width: 100%;
+		display: block;
+		text-align: center;
+	}
+	.app-mobile-review-txt {
+		width: 100%;
+		text-align: center;
+	}
+	.app-mobile-review-ul {
+		width: 46%;
+		padding: 0 0 0 50%;
+		margin: 0;
+	}
+	.app-mobile-review-li {
+		padding: 0 0 0 30px;
+	}
+	.result {
+		display: none;
+	}
+	.posts {
+		padding: 20px;
+	}
+	.posts-title {
+		margin: 0 0 10px 0;
+	}
+    .posts-item:nth-of-type(3) {
+        margin: 20px 0 20px 0;
+    }
+	.posts-item {
+		margin: 20px 0 0 0;
+	}
+	.posts-next-btn {
+		width: 28%;
+	}
+	.partners {
+		padding: 20px;
+		flex-wrap: wrap;
+	}
+	.partners-link {
+		margin: 0 0 10px 0;
+	}
+	.item3 {
+		order: -1;
+	}
+	.add-information {
+		display: none;
+	}
+	.copy {
+		padding: 20px;
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: center;
+	}
+	.copy-p:nth-of-type(1) {
+		margin: 0 0 15px 0;
+	}
+	.copy {}
 }
